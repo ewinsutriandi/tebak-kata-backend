@@ -1,0 +1,7 @@
+venv/*
+*.pyc
+venv/**
+env/**
+app/__pycache__/**
+application/static/image/**
+.vscode
