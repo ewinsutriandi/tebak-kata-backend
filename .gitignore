@@ -5,4 +5,4 @@ env/**
 app/__pycache__/**
 application/static/image/**
 .vscode
-*config.py
+application/config.py

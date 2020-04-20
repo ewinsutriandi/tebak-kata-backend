@@ -2,7 +2,7 @@ from flask_restful import Resource
 from flask import request
 from application import app, db, api
 
-@api.route('/test')
+@api.route('/health')
 class Test(Resource):
     #method_decorators=[wrap_test]
     def get(self):
