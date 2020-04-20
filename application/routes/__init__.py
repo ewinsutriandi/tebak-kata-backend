@@ -18,5 +18,5 @@ class Hello(Resource):
     #method_decorators=[wrap_test]
     def get(self):
         return {'message':'Tebak kata backend API'}
-    def post(self):
-        return {'message':'Tebak kata backend API'}
+
+import application.routes.test

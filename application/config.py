@@ -1,3 +1,4 @@
+import application
 class BaseConfig(object):
     DEBUG = True
     TESTING = False
@@ -13,7 +14,11 @@ class BaseConfig(object):
     #JWT_BLACKLIST_ENABLED=True
     #JWT_BLACKLIST_TOKEN_CHECKS=['access','refresh']
 
-class DevelopmentConfig(BaseConfig):
+class Development(BaseConfig):
+    DEBUG = True
+    TESTING = True
+
+class Production(BaseConfig):
     DEBUG = True
     TESTING = True
     DBHOST = 'localhost'
@@ -21,6 +26,3 @@ class DevelopmentConfig(BaseConfig):
     DBPASS = 'root'
     DBNAME = 'wg'
 
-class ProductionConfig(BaseConfig):
-    DEBUG = False
-  
