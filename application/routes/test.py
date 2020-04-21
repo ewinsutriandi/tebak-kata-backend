@@ -28,7 +28,7 @@ def db_test():
 def db_time():
 	try:
 		conn = db.getconn()
-		return db.commit_sql('select now()')
+		return db.get_single_val_query('select now()')
 	except Exception as e:
 		print(e)
 	return False
