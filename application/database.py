@@ -8,7 +8,7 @@ class Database():
 		db = pymysql.connect(c['DBHOST'],c['DBUSER'],c['DBPASS'],c['DBNAME'])
 		return db 
 
-  
+	
 	def get_single_val_query(self,str,params=[]):
 		try:
 			conn = self.getconn()
@@ -41,7 +41,7 @@ class Database():
 		except Exception as e:
 			self.app.logger.error(e,exc_info=True)
 			raise RuntimeError('oops') from e
-  
+	
 	def commit_sql(self, sql, params=[]):
 		conn = self.getconn()
 		cur = conn.cursor()
